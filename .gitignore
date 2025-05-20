@@ -3,3 +3,5 @@
 
 # ignora o pycache
 /scripts/__pycache__
+/tests/__pycache__
+/tests/.pytest_cache

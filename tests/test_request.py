@@ -6,8 +6,8 @@ def gen_password(length=12):
     char = string.ascii_letters + string.digits + string.punctuation
     password = ''.join(secrets.choice(char) for _ in range(length))
     return password
-
 password = gen_password()
+
 url = 'http://127.0.0.1:8080/hash'
 json = {
     'password': password
