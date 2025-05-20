@@ -2,6 +2,10 @@
 /venv
 
 # ignora o pycache
-/scripts/__pycache__
-/tests/__pycache__
-/tests/.pytest_cache
+/api_drf/api_drf/__pycache__
+/api_flask/scripts/__pycache__
+/api_flask/tests/__pycache__
+/api_flask/tests/.pytest_cache
+
+# ignora o banco de dados gerado pelo Django
+/api_drf/db.sqlite3
