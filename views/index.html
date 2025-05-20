@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-[100%] w-[100%]">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Criptografar</title>
+</head>
+
+<body class="h-[100vh] w-[100%] flex justify-evenly items-center bg-[#656565] flex-col">
+    <div id="conteinerCollectData" class="
+    flex flex-col justify-around items-center h-[55%] w-[70%] bg-[#2e3030] rounded-[16px]
+    ">
+        <h1 class="text-[40px] bold">Criptografar senhas:</h1>
+        <br>
+        <div id="form" class="flex flex-col justify-around items-center h-[50%] w-[70%] bg-zinc-800 rounded-[16px]">
+            <label for="passwordId">Senha para criptografar:</label>
+            <input class="focus:outline-none" type="text" name="usePassword" id="passwordId" placeholder="Sua senha:">
+        </div>
+        <button onclick="cryptoPass()">Criptografar</button>
+    </div>
+
+    <div id="responseConteiner" class=""">
+        <h2 class=" top">Sua resposta:</h2>
+    </div>
+
+    <script>
+        console.log('Hello World');
+        import { genSaltSync, hashSync } from './bcrypt';
+        function cryptoPass() {
+            const inputPassword = document.getElementById('passwordId');
+            const userPassword = inputPassword.value;
+            const salt = genSaltSync(10);
+            const hashedPassword = hashSync(userPassword, salt);
+    
+            console.log('Hashed Password:', hashedPassword);
+        }
+    
+    </script>
+</body>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+</html>
