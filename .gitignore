@@ -2,6 +2,8 @@
 /venv
 
 # ignora o pycache
+/api_drf/api/__pycache__
+/api_drf/api/migrations/__pycache__
 /api_drf/api_drf/__pycache__
 /api_flask/scripts/__pycache__
 /api_flask/tests/__pycache__
