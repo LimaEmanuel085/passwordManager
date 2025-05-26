@@ -1,3 +1,6 @@
+__pycache__/
+*.pyc
+
 # ignora a pasta de ambiente virtual
 /venv
 
